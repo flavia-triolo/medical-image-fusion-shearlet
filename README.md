@@ -73,7 +73,7 @@ A bivariate grid search was performed over the Guided Filter spatial radius $r \
 The analysis identified three distinct operational behaviors:
 1. **Under-regularized regime ($\varepsilon \le 10^{-5} \ll \text{Var}_{\text{median}}$):** The linear slope attempts to fit the abrupt step edges of the raw binary saliency map $BW_A$, producing noisy and fractured weights that introduce false edges.
 2. **Transition regime ($\varepsilon \in [10^{-4}, 10^{-3}]$):** $\varepsilon$ matches the local variance of brain tissues, actively discriminating between flat areas and structural edges.
-3. **Asymptotic regime ($\varepsilon \ge 10^{-2} \gg \text{Var}_{95\%}$):** The local variance becomes negligible relative to $\varepsilon$; the filter stably converges to a smooth spatially weighted partition without step artifacts.
+3. **Asymptotic regime ($\varepsilon \ge 10^{-2} \gg \text{Var}_{95\\%}$):** The local variance becomes negligible relative to $\varepsilon$; the filter stably converges to a smooth spatially weighted partition without step artifacts.
 
 #### Weight Map Evolution Across Regimes
 Visual evolution of the CT weight map $W_{CT}$ across the three regimes compared to the raw binary map $BW_{CT}$:
@@ -86,7 +86,7 @@ Visual evolution of the CT weight map $W_{CT}$ across the three regimes compared
 ### 4. Robustness and Perturbation Stress-Testing
 To assess stability against sensor noise, controlled artificial perturbations were added to the source images before iterative execution of the fusion pipeline:
 * **Additive White Gaussian Noise (AWGN):** $\sigma^2 \in \{0.001, 0.005, 0.01, 0.02\}$. The uniform angular dispersion of isotropic noise across the 48 shearlet subbands enables the choose-max rule to effectively suppress noise, achieving higher PSNR and lower RMSE compared to wavelets and Fourier.
-* **Bipolar Salt & Pepper Impulsive Noise:** corruption densities $d \in \{1\%, 2\%, 5\%, 10\%\}$.
+* **Bipolar Salt & Pepper Impulsive Noise:** corruption densities $d \in \{1\\%, 2\\%, 5\\%, 10\\%\}$.
 
 ><img width="385" height="287" alt="Screenshot 2026-10-15 125827" src="https://github.com/user-attachments/assets/938b3d98-3861-4911-b80e-f7b29ad42169" />
 
