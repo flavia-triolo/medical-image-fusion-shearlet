@@ -68,7 +68,7 @@ The 5-panel comparison demonstrates how the Shearlet transform successfully pres
 
 ### 3. Parametric Sensitivity Analysis & Weight Map Regularization
 
-A bivariate grid search was performed over the Guided Filter spatial radius $r \in \{3, 5, 10, 20, 30\}$ and regularization factor $\varepsilon \in \{10^{-6}, 10^{-5}, 10^{-4}, 10^{-3}, 10^{-1}\}$ relative to the base layer's local variance ($\text{Var}_{\text{median}} \approx 1.76 \times 10^{-4}$, $\text{Var}_{95\%} \approx 1.50 \times 10^{-3}$).
+A bivariate grid search was performed over the Guided Filter spatial radius $r \in \{3, 5, 10, 20, 30\}$ and regularization factor $\varepsilon \in \{10^{-6}, 10^{-5}, 10^{-4}, 10^{-3}, 10^{-1}\}$ relative to the base layer's local variance ($\text{Var}_{\text{median}} \approx 1.76 \times 10^{-4}$, $\text{Var}_{95\\%} \approx 1.50 \times 10^{-3}$).
 
 The analysis identified three distinct operational behaviors:
 1. **Under-regularized regime ($\varepsilon \le 10^{-5} \ll \text{Var}_{\text{median}}$):** The linear slope attempts to fit the abrupt step edges of the raw binary saliency map $BW_A$, producing noisy and fractured weights that introduce false edges.
